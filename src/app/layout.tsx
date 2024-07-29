@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import '@mantine/core/styles.css';
 
 import { MantineProvider } from '@mantine/core';
+import { McMurtryTheme } from "./theme"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider theme={McMurtryTheme}>{children}</MantineProvider>
       </body>
     </html>
   );

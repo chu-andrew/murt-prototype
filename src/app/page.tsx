@@ -1,10 +1,10 @@
+import { Text } from "@mantine/core";
+
 export default function Home() {
   return (
-    <main >
-      <div >
-        <p>
-          McMurtry College
-        </p>
+    <main>
+      <div>
+        <Text>McMurtry College</Text>
       </div>
     </main>
   );
