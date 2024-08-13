@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import '@mantine/core/styles.css';
+import "@mantine/core/styles.css";
 
-import { MantineProvider } from '@mantine/core';
-import { McMurtryTheme } from "./theme"
+import { MantineProvider } from "@mantine/core";
+import { McMurtryTheme } from "./theme";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "McMurtry College",
-  description: "Burt and Deedee McMurtry College at Rice University in Houston, Texas",
+  description:
+    "Burt and Deedee McMurtry College at Rice University in Houston, Texas",
 };
 
 export default function RootLayout({
@@ -17,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MantineProvider theme={McMurtryTheme}>{children}</MantineProvider>
+        <MantineProvider theme={McMurtryTheme}>
+          <Header />
+          {children}
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );
