@@ -1,6 +1,14 @@
 "use client";
 import Link from "next/link";
-import { Box, Menu, Group, Center, Burger, Container } from "@mantine/core";
+import {
+  Box,
+  Menu,
+  Group,
+  Center,
+  Burger,
+  Container,
+  UnstyledButton,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconHexagonLetterM } from "@tabler/icons-react";
 import headerRoutes from "./HeaderRoutes";
@@ -52,7 +60,11 @@ export function Header() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <IconHexagonLetterM size={28} />
+          <Link href="/" passHref>
+            <UnstyledButton className={classes.logoLink}>
+              <IconHexagonLetterM size={28} />
+            </UnstyledButton>
+          </Link>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
