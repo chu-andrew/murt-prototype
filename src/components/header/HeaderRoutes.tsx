@@ -1,17 +1,17 @@
 const headerRoutes = [
-  { label: "O-Week", link: "/oweek" },
-  { label: "About", link: "/about" },
+  { link: "/oweek", label: "O-Week" },
+  { link: "/about", label: "About" },
   {
-    label: "Events",
     link: "/events",
+    label: "Events",
     links: [
       { link: "/calendar", label: "Calendar" },
       { link: "/budget", label: "Budget/Expenses" },
     ],
   },
   {
-    label: "People",
     link: "/people",
+    label: "People",
     links: [
       { link: "/team", label: "McTeam" },
       { link: "/ministry", label: "McMinistry" },
@@ -28,8 +28,8 @@ const headerRoutes = [
     ],
   },
   {
-    label: "Resources",
     link: "/resources",
+    label: "Resources",
     links: [
       { link: "/room-reservations", label: "Room Reservations" },
       { link: "/financial-inclusivity", label: "Financial Inclusivity" },
