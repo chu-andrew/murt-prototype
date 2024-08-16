@@ -5,6 +5,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconHexagonLetterM } from "@tabler/icons-react";
 import headerRoutes from "./HeaderRoutes";
 import classes from "./Header.module.css";
+import HeaderMobileDrawer from "./HeaderMobileDrawer";
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -54,9 +55,18 @@ export function Header() {
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <Burger
+            // This burger does not receive the "opened" state because
+            // the opening HeaderMobileDrawer obscures its transition
+            // into an X. Functionally equal to an ActionIcon component.
+            onClick={toggle}
+            size="sm"
+            hiddenFrom="sm"
+            aria-label="Toggle navigation"
+          />
         </div>
       </Container>
+      <HeaderMobileDrawer opened={opened} toggle={toggle} />
     </header>
   );
 }
