@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Menu, Group, Center, Burger, Container } from "@mantine/core";
+import { Box, Menu, Group, Center, Burger, Container } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconHexagonLetterM } from "@tabler/icons-react";
 import headerRoutes from "./HeaderRoutes";
@@ -10,10 +10,10 @@ import HeaderMobileDrawer from "./HeaderMobileDrawer";
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
 
-  const items = headerRoutes.map((link) => {
-    const menuItems = link.links?.map((item) => (
+  const items = headerRoutes.map((route) => {
+    const menuItems = route.links?.map((item) => (
       <Menu.Item key={item.link}>
-        <Link href={`${link.link}${item.link}`} className={classes.link}>
+        <Link href={`${route.link}${item.link}`} className={classes.link}>
           {item.label}
         </Link>
       </Menu.Item>
@@ -22,18 +22,19 @@ export function Header() {
     if (menuItems) {
       return (
         <Menu
-          key={link.label}
-          trigger="hover"
+          key={route.label}
+          trigger="click-hover"
           transitionProps={{ exitDuration: 0 }}
-          withinPortal
+          trapFocus={false} // necessary for accessibility https://mantine.dev/core/menu/#navigation
+          withinPortal={false}
         >
           <Menu.Target>
-            <Link href={link.link} className={classes.link}>
+            <Box className={classes.link}>
               <Center>
-                <span className={classes.linkLabel}>{link.label}</span>
+                <span className={classes.linkLabel}>{route.label}</span>
                 <IconChevronDown size="0.9rem" stroke={1.5} />
               </Center>
-            </Link>
+            </Box>
           </Menu.Target>
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
@@ -41,8 +42,8 @@ export function Header() {
     }
 
     return (
-      <Link key={link.label} href={link.link} className={classes.link}>
-        {link.label}
+      <Link key={route.label} href={route.link} className={classes.link}>
+        {route.label}
       </Link>
     );
   });
