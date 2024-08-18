@@ -9,6 +9,7 @@ interface PlainContactCardProps {
   email?: string;
   phone?: string;
   shaded?: boolean;
+  children?: React.ReactNode;
 }
 
 function PlainContactCard({
@@ -18,6 +19,7 @@ function PlainContactCard({
   email,
   phone,
   shaded,
+  children,
 }: PlainContactCardProps) {
   const isPlaceholder = name === "TBD";
 
@@ -53,6 +55,7 @@ function PlainContactCard({
                 {phone}
               </Text>
             )}
+            {children}
           </>
         )}
       </Stack>
