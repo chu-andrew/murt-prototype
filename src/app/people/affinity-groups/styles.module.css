@@ -1,0 +1,13 @@
+.flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.affinityGroup {
+  border: 1px solid var(--mantine-color-violet-2);
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--mantine-color-violet-0);
+}
