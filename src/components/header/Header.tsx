@@ -7,7 +7,7 @@ import {
   Center,
   Burger,
   Container,
-  UnstyledButton,
+  Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconHexagonLetterM } from "@tabler/icons-react";
@@ -60,10 +60,11 @@ export function Header() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <Link href="/" passHref>
-            <UnstyledButton className={classes.logoLink}>
+          <Link href="/" passHref className={classes.logoLink}>
+            <Group gap="xs">
               <IconHexagonLetterM size={28} />
-            </UnstyledButton>
+              <Title order={3}>McMurtry College</Title>
+            </Group>
           </Link>
           <Group gap={5} visibleFrom="sm">
             {items}

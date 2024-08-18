@@ -1,0 +1,12 @@
+.frame {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem 1.5rem 0rem;
+}
