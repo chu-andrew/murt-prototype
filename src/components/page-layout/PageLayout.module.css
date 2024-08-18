@@ -1,5 +1,8 @@
 .frame {
   min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titleWrapper {

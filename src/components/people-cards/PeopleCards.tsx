@@ -3,10 +3,11 @@ import clsx from "clsx";
 import classes from "./PeopleCards.module.css";
 
 interface PlainContactCardProps {
-  position: string;
   name: string;
-  year: string;
-  email: string;
+  position?: string;
+  year?: string;
+  email?: string;
+  phone?: string;
   shaded?: boolean;
 }
 
@@ -15,6 +16,7 @@ function PlainContactCard({
   name,
   year,
   email,
+  phone,
   shaded,
 }: PlainContactCardProps) {
   const isPlaceholder = name === "TBD";
@@ -28,18 +30,29 @@ function PlainContactCard({
       className={clsx(classes.card, { [classes.highlight]: shaded })}
     >
       <Stack align="center" gap={1}>
-        <Badge size="lg" color="violet" variant="light" mb="sm">
-          {position}
-        </Badge>
+        {position && (
+          <Badge size="lg" color="violet" variant="light" mb="sm">
+            {position}
+          </Badge>
+        )}
         <Text size="lg">{name}</Text>
         {!isPlaceholder && (
           <>
-            <Text size="sm" c="dimmed">
-              Class of {year}
-            </Text>
-            <Text size="sm" c="dimmed">
-              {email}
-            </Text>
+            {year && (
+              <Text size="sm" c="dimmed">
+                Class of {year}
+              </Text>
+            )}
+            {email && (
+              <Text size="sm" c="dimmed">
+                {email}
+              </Text>
+            )}
+            {phone && (
+              <Text size="sm" c="dimmed">
+                {phone}
+              </Text>
+            )}
           </>
         )}
       </Stack>
