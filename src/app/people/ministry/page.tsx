@@ -33,7 +33,7 @@ export default function Ministry() {
       </Box>
       <Box className={classes.organization}>
         <Title order={2} className={classes.title}>
-          People's Council
+          People&apos;s Council
         </Title>
         <SimpleGrid
           cols={{ base: 1, sm: 2, md: 3, lg: 4 }}

@@ -13,7 +13,7 @@ function Paragraph({ text, indented }: { text: string; indented?: boolean }) {
 function AutoParagraph({ text }: { text: string | string[] }) {
   return Array.isArray(text) ? (
     text.map((paragraph, index) => (
-      <Paragraph text={paragraph} indented={index > 0} />
+      <Paragraph text={paragraph} indented={index > 0} key={index} />
     ))
   ) : (
     <Paragraph text={text} />
