@@ -1,0 +1,7 @@
+.card {
+  width: 18rem; /* check for text overflows when editing */
+}
+
+.highlight {
+  background-color: var(--mantine-color-violet-0);
+}
