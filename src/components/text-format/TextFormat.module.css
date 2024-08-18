@@ -1,0 +1,8 @@
+.paragraph {
+  text-align: justify;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 2rem;
+}
