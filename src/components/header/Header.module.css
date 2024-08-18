@@ -1,0 +1,31 @@
+.header {
+  height: 3.5rem;
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+}
+
+.inner {
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: var(--mantine-color-gray-7);
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+}
+
+.linkLabel {
+  margin-right: 0.3rem;
+}
+
+.logoLink {
+  color: black;
+}
