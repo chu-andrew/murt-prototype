@@ -14,7 +14,6 @@ export default function Team() {
     (entity) => entity.position === position
   )[0];
 
-  // TODO make bio text body responsive
   return (
     <PageLayout title={title} description={description}>
       <Box className={classes.detailWrapper}>
@@ -28,7 +27,12 @@ export default function Team() {
           color="violet.3"
           className={classes.segmentedControl}
         />
-        <Title order={2} m="sm" textWrap="balance" align="center">
+        <Title
+          order={2}
+          m="sm"
+          textWrap="balance"
+          className={classes.nameTitle}
+        >
           {focusedEntity.names}
         </Title>
         {/* TODO add image */}
