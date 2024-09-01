@@ -2,7 +2,7 @@ const title = "McTeam";
 const description = [
   "The McTeam is one of our most visible and supportive mentor groups. It consists of seven members, including the College Coordinator, who is the only member not living on campus. Many of the McTeam members also work for Rice University in various roles. The team includes 1 Residential Associate (RA), 3 Resident Faculty Associates (RFAs), 2 Magisters, and the College Coordinator. The McTeam is made up of professors, administrators, advisors, and some beloved members: dogs and children!",
   "The McTeam is a fantastic resource for both personal and academic advice. They are also wonderful people to get to know! You can find them in the college halls, at the Magisters’ house, in classrooms and offices across campus, and often at West Servery during meals. They always appreciate a friendly greeting around campus or at McMurtry events!",
-];
+]; // TODO this description was based off the o-week book but partially AI generated. should be rewritten and replaced.
 
 const team = [
   {
