@@ -13,7 +13,7 @@ export default function Associates() {
           spacing="xs"
           verticalSpacing="xs"
         >
-          // TODO switch to contact cards that show image and bio
+          {/* TODO switch to contact cards that show image and bio */}
           {associates.map((member, i) => (
             <PlainContactCard name={member.name} key={i} />
           ))}{" "}
