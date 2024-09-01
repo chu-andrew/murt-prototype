@@ -9,3 +9,7 @@
 .segmentedControl {
   margin: 1rem;
 }
+
+.nameTitle {
+  align-self: center;
+}

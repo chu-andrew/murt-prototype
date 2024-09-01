@@ -2,7 +2,7 @@ const title = "McTeam";
 const description = [
   "The McTeam is one of our most visible and supportive mentor groups. It consists of seven members, including the College Coordinator, who is the only member not living on campus. Many of the McTeam members also work for Rice University in various roles. The team includes 1 Residential Associate (RA), 3 Resident Faculty Associates (RFAs), 2 Magisters, and the College Coordinator. The McTeam is made up of professors, administrators, advisors, and some beloved members: dogs and children!",
   "The McTeam is a fantastic resource for both personal and academic advice. They are also wonderful people to get to know! You can find them in the college halls, at the Magisters’ house, in classrooms and offices across campus, and often at West Servery during meals. They always appreciate a friendly greeting around campus or at McMurtry events!",
-];
+]; // TODO this description was based off the o-week book but partially AI generated. should be rewritten and replaced.
 
 const team = [
   {
@@ -26,7 +26,17 @@ const team = [
       "My name is Jackie Carrizales and I am the McMurtry College Coordinator. I have been the Coordinator here since the week before O-Week in 2015, but I have been an associate at McMurtry since it opened in the Summer of 2009. I was so excited to be able to be a part of a college from the beginning and see the start of all of the traditions that make each college unique. I can’t believe that I’m lucky enough to spend every day here now and get paid for it!",
       "I have worked at Rice for 14 years. Away from McMurtry, I am married to my husband, Marc, and we have three adult sons, Max, Luke, and Leo. We also have three dogs, Azura, Shorty and Dagon, who think that they control the house (and they really do). My office is on the ground floor right outside the door to the commons. I love when students visit and tell me about what is going on with their lives, so please stop by any time to say 'Hi.' Grab some candy or a cup of coffee or tea.",
       "There are some very comfortable couches and chairs in my office, along with Squishmallows if you need a hug, and puzzles to challenge your brain. I’m always ready to talk about Asian dramas, Korean music, Astros baseball, or whatever interests you!",
-      "Things you can do in my office:",
+    ],
+    officeItems: [
+      "Pick up mail and packages",
+      "Buy stamps and get envelopes",
+      "Catch up with Jackie!",
+      "Borrow an extra room key",
+      "Do homework",
+      "Use the staplers, packing tape, scissors, shredder, etc.",
+      "Take a study break",
+      "Relax with other Murts",
+      "Solve puzzles",
     ],
     image: "/team/jackie.png",
   },
