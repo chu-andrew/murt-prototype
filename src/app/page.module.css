@@ -43,3 +43,10 @@
     text-align: left;
   }
 }
+
+.homeContainer {
+  min-height: 55vh;
+  @media (max-width: $mantine-breakpoint-xs) {
+    min-height: 70vh;
+  }
+}
